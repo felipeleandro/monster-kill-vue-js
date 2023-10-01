@@ -1,0 +1,47 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+
+<div id="game">
+    <div class="battle">
+        <div class="player">
+            <h2>Jogador</h2>
+            <div class="progress-bar">
+                <div class="progress-bar-player-life" :class="{ 'lowHealth' : playerLowHealth }" :style="{ width: `${playerHealth}%` }">
+                </div>
+            </div>
+            <p id="playerHealth" class="health" :text="playerHealth">{{ `${playerHealth}%` }}</p>
+        </div>
+
+        <div class="monster">
+            <h2>Monstro</h2>
+            <div class="progress-bar">
+                <div class="progress-bar-monster-life" :class="{ 'lowHealth' : monsterLowHealth }" :style="{ width: `${monsterHealth}%` }">
+                </div>
+            </div>
+            <p id="monsterHealth" class="health" :text="monsterHealth">{{ `${monsterHealth}%` }}</p>
+        </div>
+    </div>
+
+    <div v-if="endGame" class="messageGame">        
+        <p :text="messageEndGame">{{ messageEndGame }}</p>        
+    </div>
+
+    <div class="buttons">
+        <template v-if="!newGame">
+            <button id="btnAttack" @click="attack">ATAQUE</button>
+            <button id="btnSpecialAttack" @click="specialAttack">ATAQUE ESPECIAL</button>
+            <button id="btnHeal" @click="heal">CURAR</button>
+            <button id="btnSurrender" @click="surrender">DESISTIR</button>
+        </template>        
+        <button id="btnNewGame" @click="surrender" v-else>INICIAR NOVO JOGO</button>
+    </div>
+
+    <div v-if="startedGame" class="log">
+        <template v-for="log in battleLog">            
+            <p id="registerLog" :class="log.includes('Jogador') ? 'playerLog' : 'monsterLog'">{{ log }}</p>            
+        </template>
+    </div>
+</div>
+
+<script src="app.js"></script>

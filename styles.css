@@ -1,0 +1,124 @@
+.battle {
+    display: inline-flex;
+    border: 1px solid black;
+    margin: 50px;
+    height: 150px;
+    width: 95%;
+}
+
+.player{
+    width:50%;
+}
+
+.monster{
+    width:50%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.progress-bar {
+    width:500px;
+    height:20px;
+    border: 1px solid black;        
+    margin: auto;
+}
+
+.progress-bar-player-life {    
+    height:20px;
+    background-color: green;    
+}
+
+.progress-bar-monster-life {    
+    height:20px;
+    background-color: green;    
+}
+
+
+.health {
+    text-align: center;
+    margin: 2px;
+}
+
+.buttons {
+    width:95%;
+    height:75px;
+    border: 1px solid black;
+    margin: 50px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 5px;
+    border: 0px;
+    height: 30px;
+    border-radius: 15%;
+}
+
+#btnAttack{
+    background-color: red;
+}
+
+#btnSpecialAttack{
+    background-color: orange;
+}
+
+#btnHeal{
+    background-color: green;
+}
+
+#btnSurrender {
+    background-color: gray;
+}
+
+#btnNewGame {
+    background-color: lightblue;
+}
+
+.messageGame {
+    width:95%;
+    height:75px;
+    border: 1px solid black;
+    margin: 50px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.win {
+    color: green    
+}
+
+.lose {
+    color: red
+}
+
+.lowHealth {
+    background-color: red;
+}
+
+.log {
+    border: 1px solid black;
+    margin: 50px;
+    height: auto;
+    width: 95%;
+}
+
+#registerLog {
+    text-align: center;
+    font-size: x-large;    
+    color: white;
+}
+
+.playerLog {
+    background: rgb(68, 188, 228);    
+}
+
+.monsterLog {
+    background: rgba(231, 62, 62, 0.877);
+}
